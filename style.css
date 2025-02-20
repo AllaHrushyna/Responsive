@@ -1,0 +1,97 @@
+/*METHODE 1
+MEDIA QUERIES*/
+
+/*
+h1 {
+    font-size: 2em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+p {
+    font-size: 1em;
+}
+
+@media (min-width: 750px) {
+    body {
+        color: rgb(128, 34, 86);
+        background-color: rgb(250, 235, 235);
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    h1 {
+        font-size: 3em;
+    }
+    h2 {
+        font-size: 2.25em;
+    }
+    p {
+        font-size: 1.5em;
+    }
+}
+
+@media (min-width: 1250px) {
+    body {
+        color: rgb(24, 140, 155);
+        background-color: rgb(203, 241, 232);
+    }
+    h1 {
+        font-size: 4em;
+    }
+    h2 {
+        font-size: 3em;
+    }
+    p {
+        font-size: 2em;
+    }
+}
+    */
+
+    /*METHODE 2
+    CALC*/
+
+   /* 
+   :root {
+        --text-multiplier: 1;
+    }
+
+    h1 {
+        font-size: calc(2em * var(--text-multiplier));
+    }
+    h2 {
+        font-size: calc(1.5em * var(--text-multiplier));
+    }
+    p {
+        font-size: calc(1em * var(--text-multiplier));
+    }
+
+    @media (min-width: 750px) {
+        :root {
+            --text-multiplier: 3;
+        }
+    }
+        */
+
+    /*METHODE 3
+     CLAMP*/
+
+    h1, h2, p {
+        font-size: clamp(var(--min), var(--val), var(--max));
+    }
+    h1 {
+        --min: 2em;
+        --val: 5vw;
+        --max: 7em;
+    }
+    h2 {
+        --min: 1.5em;
+        --val: 4vw;
+        --max: 3em;
+    }
+    p {
+        --min: 1em;
+        --val: 2.5vw;
+        --max: 1.25em;
+    }
+
